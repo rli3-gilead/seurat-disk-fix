@@ -227,13 +227,13 @@ setMethod(
   definition = BasicWrite
 )
 
-#' @importClassesFrom Seurat Assay5
+#' @importClassesFrom Seurat Assay
 #'
 #' @rdname WriteH5Group
 #'
 setMethod(
   f = 'WriteH5Group',
-  signature = c('x' = 'Assay5'),
+  signature = c('x' = 'Assay'),
   definition = function(x, name, hgroup, verbose = TRUE) {
     xgroup <- hgroup$create_group(name = name)
     # Write out expression data
